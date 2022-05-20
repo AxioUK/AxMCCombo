@@ -24,6 +24,16 @@ Begin VB.Form Form1
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   650
    StartUpPosition =   3  'Windows Default
+   Begin VB.CheckBox Check4 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Enabled ?"
+      Height          =   195
+      Left            =   7650
+      TabIndex        =   52
+      Top             =   1635
+      Value           =   1  'Checked
+      Width           =   1260
+   End
    Begin VB.TextBox Text5 
       Alignment       =   2  'Center
       Height          =   285
@@ -44,49 +54,36 @@ Begin VB.Form Form1
    End
    Begin axMCCombo2.axMCCombo axMCCombo1 
       Height          =   420
-      Left            =   2730
+      Left            =   2490
       TabIndex        =   45
-      Top             =   2595
-      Width           =   2790
-      _ExtentX        =   4921
-      _ExtentY        =   741
-      HeaderH         =   24
-      LineColor       =   15790320
-      GridStyle       =   3
-      Striped         =   -1  'True
-      StripedColor    =   16645629
-      SelColor        =   -2147483635
-      ItemH           =   0
-      BorderColor     =   8388608
-      BorderWidth     =   1
-      CornerCurve     =   1
-      Header          =   -1  'True
-      ForeColor       =   0
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Tahoma"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      VisibleRows     =   8
-      DropWidth       =   0
-      ButtonColorPress=   0
-      BeginProperty IconFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "IcoFont"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      IconCharCode    =   60007
-      IconForeColor   =   0
-      IcoPaddingX     =   5
-      IcoPaddingY     =   4
+      Top             =   2445
+      Width           =   3135
+      _extentx        =   5530
+      _extenty        =   741
+      enabled         =   -1  'True
+      headerh         =   24
+      linecolor       =   15790320
+      gridstyle       =   3
+      striped         =   -1  'True
+      stripedcolor    =   16645629
+      selcolor        =   -2147483635
+      itemh           =   0
+      bordercolor     =   8388608
+      borderwidth     =   1
+      cornercurve     =   5
+      header          =   -1  'True
+      forecolor       =   0
+      visiblerows     =   8
+      dropwidth       =   0
+      combostyle      =   1
+      font            =   "Form1.frx":0000
+      backcolor       =   16744576
+      buttoncolorpress=   0
+      iconfont        =   "Form1.frx":0028
+      iconcharcode    =   60007
+      iconforecolor   =   0
+      icopaddingx     =   5
+      icopaddingy     =   4
    End
    Begin VB.Frame Frame1 
       Caption         =   "Frame1"
@@ -109,46 +106,31 @@ Begin VB.Form Form1
          TabIndex        =   46
          Top             =   450
          Width           =   3045
-         _ExtentX        =   5371
-         _ExtentY        =   1323
-         HeaderH         =   24
-         LineColor       =   15790320
-         GridStyle       =   3
-         Striped         =   -1  'True
-         StripedColor    =   16645629
-         SelColor        =   -2147483635
-         ItemH           =   0
-         BorderColor     =   9471874
-         BorderWidth     =   1
-         CornerCurve     =   1
-         Header          =   -1  'True
-         ForeColor       =   0
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         VisibleRows     =   8
-         DropWidth       =   0
-         MultiLine       =   -1  'True
-         ButtonColorPress=   0
-         BeginProperty IconFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "IcoFont"
-            Size            =   15.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         IconCharCode    =   61357
-         IconForeColor   =   0
-         IcoPaddingX     =   -5
-         IcoPaddingY     =   0
+         _extentx        =   5371
+         _extenty        =   1323
+         enabled         =   -1  'True
+         headerh         =   24
+         linecolor       =   15790320
+         gridstyle       =   3
+         striped         =   -1  'True
+         stripedcolor    =   16645629
+         selcolor        =   -2147483635
+         itemh           =   0
+         bordercolor     =   9471874
+         borderwidth     =   1
+         cornercurve     =   1
+         header          =   -1  'True
+         forecolor       =   0
+         visiblerows     =   8
+         dropwidth       =   0
+         font            =   "Form1.frx":0050
+         buttoncolorpress=   0
+         multiline       =   -1  'True
+         iconfont        =   "Form1.frx":0078
+         iconcharcode    =   61357
+         iconforecolor   =   0
+         icopaddingx     =   -5
+         icopaddingy     =   0
       End
    End
    Begin VB.CheckBox Check3 
@@ -199,7 +181,7 @@ Begin VB.Form Form1
    Begin VB.PictureBox Picture1 
       Height          =   300
       Left            =   10110
-      Picture         =   "Form1.frx":0000
+      Picture         =   "Form1.frx":00A0
       ScaleHeight     =   240
       ScaleWidth      =   255
       TabIndex        =   35
@@ -596,7 +578,7 @@ Begin VB.Form Form1
       Alignment       =   2  'Center
       AutoSize        =   -1  'True
       BackStyle       =   0  'Transparent
-      Caption         =   $"Form1.frx":0312
+      Caption         =   $"Form1.frx":03B2
       Height          =   975
       Left            =   6555
       TabIndex        =   6
@@ -665,6 +647,12 @@ Private Sub Check3_Click()
 axMCCombo1.MultiLine = Check3.Value
 End Sub
 
+Private Sub Check4_Click()
+axMCCombo1.Enabled = Check4.Value
+axMCCombo2.Enabled = Check4.Value
+
+End Sub
+
 Private Sub cmdCharCode_Click()
 On Error Resume Next
 axMCCombo1.IconCharCode = txtCharCode.Text
@@ -700,6 +688,8 @@ Private Sub axMCCombo1_ItemClick(Item As Long)
 
     txt1.SelStart = 0
     txt1.SelLength = Len(txt2)
+    
+    Debug.Print "ColumnCount=" & axMCCombo1.ColumnCount
 End Sub
 
 Private Sub Check1_Click()
